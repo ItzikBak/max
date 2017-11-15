@@ -1,10 +1,7 @@
 #pragma once
 
-template <typename T>
-T& max(T& a, T& b, T& c)
+template <typename T, typename COMP>
+T& compare(T& a, T& b, COMP comp)
 {
-	if(a >= b)
-		return (a >= c) ? a : c;
-	else
-		return (b >= c) ? b : c;
+	return comp(a,b);
 }
